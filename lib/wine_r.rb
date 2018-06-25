@@ -1,5 +1,7 @@
-require "wine_r/version"
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
 
-module WineR
-  # Your code goes here...
-end
+
+require_relative './wine_r/version'
+require_relative './cli'
