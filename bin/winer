@@ -1,7 +1,8 @@
 #!/usr/bin/ env ruby
 
+
+require "../lib/cli"
 require "bundler/setup"
 require "wine_r"
-require "../lib/cli"
 
-WineR::CLI.new.call
+CLI.new.call

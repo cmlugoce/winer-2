@@ -1,12 +1,12 @@
-class WineR::CLI
+class CLI
 
   def call
-      list_wines
+      list_wine
       menu
       goodbye
     end
 
-    def list_wines
+    def list_wine
       puts center("Welcome to Wine-R")
       puts ""
       puts "  Today's Top Wines:"
