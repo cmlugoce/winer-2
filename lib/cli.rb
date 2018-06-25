@@ -19,13 +19,17 @@ class CLI
 
 
 
+
+
+
     def menu
       current_year = Date.today.year
       input = nil
       while input != "exit"
         puts ""
-        puts wrap("Enter the number of wine you'd like more info on, 'list' to see today's wines again or 'exit'. For the top wines of #{current_year} enter 'year': ")
+        puts wrap("Enter the number of wine you'd like more info on, 'list' to see today's wines again or 'exit'.")
         puts ""
+        input = nil
         input = gets.strip.downcase
 
 
@@ -35,9 +39,9 @@ class CLI
           puts "#{input.to_i}. #{the_wine.name} - #{the_wine.rating_price}"
           puts center("Description")
           puts ""
-          puts wrap("#{the_wine.description}").split('—')
+          puts wrap("#{wine.description}").split('—')
         elsif input == "list"
-          list_todays_wines
+          list_wine
         elsif input == "year"
           list_years_wines
         elsif input != "exit"
